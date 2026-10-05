@@ -38,7 +38,7 @@ namespace PR_8
                     if (targetAmount <= initialCapital)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("\nОшибка: Целевая сумма (s) должна быть больше стартового капитала (n)!");
+                        Console.WriteLine("\nОшибка: Целевая сумма (stargetAmount) должна быть больше стартового капитала (initialCapital)!");
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         return;
                     }
