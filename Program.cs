@@ -32,6 +32,10 @@ namespace PR_8
                     double p = Convert.ToDouble(Console.ReadLine());
                     Console.Write("Введите целевую сумму (s): ");
                     double s = Convert.ToDouble(Console.ReadLine());
+if (n<<0||p<0||s<0)
+{Console.ForegroundColor=ConsoleColor.DarkRed;
+
+}
                     double sum = 0;
                     double d = n;
                     int m = 0;
