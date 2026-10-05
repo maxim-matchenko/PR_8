@@ -70,8 +70,8 @@ namespace PR_8
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("\nЧто-то пошло не так. Ошибка: " + ex.Message);
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
+             Console.ReadKey();
             }
-            Console.ReadKey();
         }
     }
 }
