@@ -1,4 +1,4 @@
-﻿//****************************************************************************
+//****************************************************************************
 //* Практическая работа N8                                                   *
 //* Выполнил: Матченко M.C., группа 2-ИСП-оКФ                                *
 //* Вариант 4                                                                *
@@ -18,7 +18,7 @@ namespace PR_8
             Console.WriteLine("Здравствуйте!");
             try
             {
-                string Select; // переменная для контроля повторного запуска
+                string select; // переменная для контроля повторного запуска
                 do // внешний цикл для повторного запуска 
                 {
                     Console.WriteLine("\n--- Новый расчет ---");
@@ -42,27 +42,24 @@ namespace PR_8
                         Console.ForegroundColor = ConsoleColor.DarkMagenta;
                         return;
                     }
-                    double sum = 0; 
-                    double currentIncome = initialCapital; 
-                    int month = 0; 
-                    int maxMonth = 10000; 
+                    double sum = 0;
+                    double currentIncome = initialCapital;
+                    int month = 0;
+                    int maxMonth = 10000;
                     do // внутренний цикл с постусловием для расчета накоплений
                     {
-                        month++; 
-                        sum += currentIncome; 
-                        if (sum >= targetAmount)
-                        {
-                            break; 
-                        }
+                        month++;
+                        sum += currentIncome;
+                        if (sum >= targetAmount) break;
                         currentIncome *= 1 + monthlyGrowthPercent / 100; // расчет увеличения дохода
                     }
                     while (month <= maxMonth);
                     double year = (double)month / 12.0;
                     Console.WriteLine($"\nДаня М. сможет отправиться в тур через {Math.Round(year, 1)} лет.");
                     Console.Write("\nХотите выполнить программу еще раз? (да - 1/нет - любая клавиша): ");
-                    Select = Console.ReadLine();
+                    select = Console.ReadLine();
                 }
-                while (Select == "1"); // проверка ответа (1 - да)
+                while (select == "1"); // проверка ответа (1 - да)
                 Console.WriteLine("\nПрограмма завершена. Нажмите любую клавишу для выхода...");
             }
             catch (Exception ex)
@@ -74,4 +71,3 @@ namespace PR_8
             }
         }
     }
-}
